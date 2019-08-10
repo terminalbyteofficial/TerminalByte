@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Terminal Byte Health</string>
+    <string name="home">HOME</string>
 </resources>
