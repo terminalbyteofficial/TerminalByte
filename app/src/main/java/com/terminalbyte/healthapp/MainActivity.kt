@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.login_or_signup.*
 class MainActivity : AppCompatActivity() {
 
     private var loginB: Button? = null
+    private var skipB: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_or_signup)//present screen
@@ -19,6 +20,12 @@ class MainActivity : AppCompatActivity() {
             //Intent of the login page
             val int= Intent(this, loginActivity::class.java)
             startActivity(int)//login page opens
+        }
+        //Remove this after the fireBase setup...
+        skipB = findViewById(R.id.skipButton) as Button
+        skipB?.setOnClickListener {
+            val hInt = Intent(this, NavigationDrawerActivity::class.java)
+            startActivity(hInt)
         }
 
 
