@@ -23,4 +23,6 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="terminal_byte">Terminal Byte</string>
+    <string name="back">Back</string>
+    <string name="setting">Setting</string>
 </resources>

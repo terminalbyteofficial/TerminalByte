@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_or_signup)//present screen
         setSupportActionBar(findViewById(R.id.action_bar))
+
         loginB= findViewById(R.id.loginButton) as Button//get the login button
         loginB?.setOnClickListener{//if the Login button is clicked
             //Intent of the login page
@@ -27,6 +28,11 @@ class MainActivity : AppCompatActivity() {
             val hInt = Intent(this, NavigationDrawerActivity::class.java)
             startActivity(hInt)
         }
+        val bgs=Intent(this, bgThreadWater::class.java)
+        startService(bgs)
+
+
+
 
 
     }
