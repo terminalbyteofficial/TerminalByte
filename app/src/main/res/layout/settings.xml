@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/base"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:background="@color/Black"
+
+    >
+        <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                      android:id="@+id/seondLay"
+                                                      android:layout_height="wrap_content"
+                                                      android:orientation="horizontal">
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@color/Black"
+                    android:textColor="@color/White"
+                    android:text="@string/back"
+                    android:textSize="15sp"
+                    android:layout_gravity="left" tools:ignore="RtlHardcoded"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="@string/setting"
+                      android:layout_gravity="center"
+                      android:textSize="30sp"
+                      android:textColor="@color/White"
+                      android:layout_marginLeft="30sp" android:layout_marginStart="30sp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>
