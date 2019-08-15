@@ -11,16 +11,17 @@ class MainActivity : AppCompatActivity() {
 
     private var loginB: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_or_signup)//present screen
+        super.onCreate(savedInstanceState)//present screen
+        setContentView(R.layout.login_or_signup)
         setSupportActionBar(findViewById(R.id.action_bar))
         loginB= findViewById(R.id.loginButton) as Button//get the login button
-        loginB?.setOnClickListener{//if the Login button is clicked
+        loginB?.setOnClickListener {
+
             //Intent of the login page
             val int= Intent(this, loginActivity::class.java)
             startActivity(int)//login page opens
-        }
+        }}
 
 
     }
-}
+

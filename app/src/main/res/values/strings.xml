@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Terminal Byte Health</string>
-    <string name="home">HOME</string>
-    <string name="Login">LOGIN</string>
+    <string name="home">Home</string>
+    <string name="Login">Login </string>
     <string name="Account">ACCOUNT</string>
     <string name="signup">SIGN UP</string>
-    <string name="new_to_terminal_byte_health">NEW TO TERMINAL BYTE HEALTH?</string>
+    <string name="new_to_terminal_byte_health">New to TERMINAL BYTE HEALTH ?</string>
     <string name="existing_user">Existing User?</string>
-    <string name="enter_email">ENTER EMAIL</string>
-    <string name="enter_password">ENTER PASSWORD</string>
+    <string name="enter_email">Enter your Gmail</string>
+    <string name="enter_password">Password</string>
 </resources>
