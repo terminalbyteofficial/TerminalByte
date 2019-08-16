@@ -10,6 +10,8 @@
         tools:context=".NavigationDrawerActivity">
 
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                 android:id="@+id/frameLayout"/>
+                 android:id="@+id/frameLayout" android:layout_marginTop="8dp"
+                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

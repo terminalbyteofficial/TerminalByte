@@ -3,10 +3,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="match_parent" android:layout_width="match_parent"
-        android:id="@+id/consT">
+        android:id="@+id/consT"
+        android:background="@drawable/bg1" tools:visibility="visible" android:visibility="visible">
     <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
                                        android:layout_height="wrap_content"
-                                       android:background="@color/Black"
+                                       android:background="#B00F0101"
                                        android:id="@+id/toolbar"
                                        app:layout_constraintTop_toTopOf="parent"
                                        app:layout_constraintEnd_toEndOf="parent"
@@ -20,47 +21,48 @@
     </androidx.appcompat.widget.Toolbar>
     <Button
             android:text="@string/Login"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="122dp"
+            android:layout_height="57dp"
             android:background="@drawable/button"
             android:textSize="35sp"
             android:textColor="@color/White"
-            android:id="@+id/loginButton"
 
-            android:layout_marginTop="8dp"
+            android:id="@+id/loginButton" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="162dp" android:layout_marginRight="162dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="162dp"
-            android:layout_marginStart="162dp" app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintVertical_bias="0.294"/>
+            android:layout_marginStart="162dp" app:layout_constraintHorizontal_bias="0.685"
+            app:layout_constraintVertical_bias="0.232"/>
     <Button
             android:text="@string/signup"
             android:background="@drawable/button"
             android:textColor="@color/White"
             android:textSize="35sp"
 
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:id="@+id/button2" android:layout_marginTop="250dp"
-            app:layout_constraintTop_toBottomOf="@+id/loginButton" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="399dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signUp" android:layout_marginTop="156dp"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="8dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            app:layout_constraintVertical_bias="0.325"/>
+            app:layout_constraintHorizontal_bias="0.498"
+    />
     <TextView
             android:text="@string/new_to_terminal_byte_health"
             android:textSize="20sp"
             android:layout_width="wrap_content"
-            android:layout_height="33dp"
+            android:layout_height="30dp"
             android:id="@+id/newUserText"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="165dp" android:layout_marginStart="165dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="187dp"
-            android:layout_marginRight="187dp" app:layout_constraintHorizontal_bias="0.457"
-            android:textStyle="bold|italic" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/loginButton" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/button2" app:layout_constraintVertical_bias="0.65999997"/>
+            android:layout_marginRight="187dp" app:layout_constraintHorizontal_bias="0.458"
+            android:textStyle="bold|italic" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton"
+            android:textColor="#FF0F00" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/signUp" app:layout_constraintVertical_bias="0.0"/>
     <TextView
             android:text="@string/existing_user"
             android:layout_width="wrap_content"
@@ -70,15 +72,23 @@
             app:layout_constraintBottom_toTopOf="@+id/loginButton" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:textSize="24sp"/>
+            android:layout_marginStart="8dp" android:textSize="24sp" android:textColor="#F328E418"/>
     <Button
-            android:text="skip(DEVELOPER)"
+            android:text="@string/skip_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/skipButton" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="161dp"
-            android:layout_marginStart="161dp" android:layout_marginTop="87dp"
-            app:layout_constraintTop_toBottomOf="@+id/button2" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="162dp" android:layout_marginRight="162dp" android:layout_marginBottom="57dp"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:background="#FF0000"
+            android:textSize="10sp"
+            android:textColor="@color/White"
+
+
+            android:id="@+id/skipLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="162dp" android:layout_marginRight="162dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="162dp"
+            android:layout_marginStart="162dp" android:layout_marginBottom="156dp"
+            app:layout_constraintBottom_toBottomOf="parent" tools:ignore="SmallSp"
+            app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/signUp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

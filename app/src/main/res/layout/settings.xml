@@ -20,7 +20,7 @@
                     android:textSize="15sp"
                     android:layout_gravity="left" tools:ignore="RtlHardcoded"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="@string/setting"
+                      android:text="@string/settings"
                       android:layout_gravity="center"
                       android:textSize="30sp"
                       android:textColor="@color/White"
