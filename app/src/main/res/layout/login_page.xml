@@ -67,6 +67,7 @@
                     android:layout_height="60dp"
                     android:background="@drawable/button"
                     android:textColor="@color/White"
+                    android:onClick="btnRegister"
                     android:textSize="20sp"
                     android:id="@+id/login" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/editText2" android:layout_marginBottom="8dp"

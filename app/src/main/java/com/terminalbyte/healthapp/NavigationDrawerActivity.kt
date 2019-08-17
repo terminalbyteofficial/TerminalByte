@@ -1,20 +1,38 @@
 package com.terminalbyte.healthapp
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
+
+
+
 class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private var pLayout: String? =null
+    private val dbFileName="user_data"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_drawer)
         //val toolbar: Toolbar = findViewById(R.id.toolbar)
        // setSupportActionBar(toolbar)
+
+        val pref:SharedPreferences = getSharedPreferences(dbFileName, Context.MODE_PRIVATE)
+
+        val name:String=pref.getString("name",null).toString()
+        Log.d("SPSTRING",name)
+
+        //this.user_name.text = "Hello"
+        //welcome_home.text = name
+
         loadHome(home = HomeButton())
         pLayout="home"
 
@@ -35,7 +53,7 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
         } else {
-            super.onBackPressed()
+            Toast.makeText(applicationContext, "Operation Not Allowed", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -97,4 +115,5 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
         hm.replace(R.id.frameLayout, alarmset)
         pLayout="alarm"
         hm.commit()}
+
 }

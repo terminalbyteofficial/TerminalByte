@@ -31,5 +31,11 @@
     <string name="set_alarm_button">Set Alarm</string>
     <string name="create_alarm">Create Alarm</string>
     <string name="logo">Logo</string>
+    <string name="login_success_prompt">SUCCESSFUL LOGIN</string>
+    <string name="login_failed_prompt">LOGIN FAILED</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="done">Done</string>
+    <string name="welcome_home_syntax">WELCOME_NAME</string>
 
 </resources>

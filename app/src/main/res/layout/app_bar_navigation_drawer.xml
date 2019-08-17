@@ -8,10 +8,9 @@
         tools:context=".NavigationDrawerActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
             android:theme="@style/SplashScreen.AppBarOverlay">
-
 
 
     </com.google.android.material.appbar.AppBarLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_height="match_parent"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent"
               xmlns:android="http://schemas.android.com/apk/res/android"
 
               android:orientation="vertical"
@@ -19,7 +19,14 @@
     style="@style/TextAppearance.Compat.Notification.Title"
     android:gravity="center"/>
 
+
 </androidx.appcompat.widget.Toolbar>
-    <include android:id="@+id/drawBar" layout="@layout/activity_navigation_drawer"/>
-    <include android:id="@+id/framL" layout="@layout/content_navigation_drawer"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/welcome_home"
+              android:text="Welcome Home"
+              android:textColor="@color/Black"
+              android:textSize="40sp"
+              android:layout_gravity="center" android:textStyle="bold|italic" tools:ignore="HardcodedText"/>
+    <!--<include android:id="@+id/drawBar" layout="@layout/activity_navigation_drawer"/>-->
+    <!--<include android:id="@+id/framL" layout="@layout/content_navigation_drawer"/>-->
 </LinearLayout>
