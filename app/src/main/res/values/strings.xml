@@ -27,4 +27,8 @@
     <string name="share">Share</string>
     <string name="send">Send</string>
     <string name="logo">Logo</string>
+    <string name="set_alarm">SET ALARM</string>
+    <string name="set_the_time">Set the time:</string>
+    <string name="set_alarm_button">Set Alarm</string>
+    <string name="create_alarm">Create Alarm</string>
 </resources>

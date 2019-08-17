@@ -59,7 +59,9 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
             R.id.nav_home -> {
                 loadHome(home = HomeButton())
             }
-            R.id.nav_gallery -> {
+            R.id.set_alarm -> {
+                setAlarm(alarmset = setAlarmButton())
+
 
             }
             R.id.nav_slideshow -> {
@@ -85,4 +87,8 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
         hm.replace(R.id.frameLayout, home)
         hm.commit()
     }
+    private fun setAlarm(alarmset: setAlarmButton ) {
+        val hm = supportFragmentManager.beginTransaction()
+        hm.replace(R.id.frameLayout, alarmset)
+        hm.commit()}
 }
