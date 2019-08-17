@@ -9,15 +9,17 @@ import com.google.android.material.navigation.NavigationView
 
 class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-
+    private var pLayout: String? =null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_drawer)
         //val toolbar: Toolbar = findViewById(R.id.toolbar)
        // setSupportActionBar(toolbar)
+        loadHome(home = HomeButton())
+        pLayout="home"
 
 
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        //val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         //val toggle = ActionBarDrawerToggle(
         //    this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -57,9 +59,11 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
+                if(pLayout!="home")
                 loadHome(home = HomeButton())
             }
             R.id.set_alarm -> {
+                if(pLayout!="alarm")
                 setAlarm(alarmset = setAlarmButton())
 
 
@@ -85,10 +89,12 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
     private fun loadHome(home: HomeButton) {
         val hm = supportFragmentManager.beginTransaction()
         hm.replace(R.id.frameLayout, home)
+        pLayout="home"
         hm.commit()
     }
     private fun setAlarm(alarmset: setAlarmButton ) {
         val hm = supportFragmentManager.beginTransaction()
         hm.replace(R.id.frameLayout, alarmset)
+        pLayout="alarm"
         hm.commit()}
 }

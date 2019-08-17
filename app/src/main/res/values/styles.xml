@@ -10,7 +10,8 @@
     <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
 
     </style>
-    <style name="SplashScreen.NoActionBar">
+    <style name="SplashScreen.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
