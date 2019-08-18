@@ -12,8 +12,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
 
-
-
 class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private var pLayout: String? =null
@@ -31,9 +29,10 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
         Log.d("SPSTRING",name)
 
         //this.user_name.text = "Hello"
-        //welcome_home.text = name
+
 
         loadHome(home = HomeButton())
+
         pLayout="home"
 
 
@@ -78,7 +77,7 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
         when (item.itemId) {
             R.id.nav_home -> {
                 if(pLayout!="home")
-                loadHome(home = HomeButton())
+                loadHome(home=HomeButton())
             }
             R.id.set_alarm -> {
                 if(pLayout!="alarm")
@@ -104,10 +103,13 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavigatio
         return true
     }
 
-    private fun loadHome(home: HomeButton) {
+    private fun loadHome(home:HomeButton) {
+
+
         val hm = supportFragmentManager.beginTransaction()
         hm.replace(R.id.frameLayout, home)
         pLayout="home"
+
         hm.commit()
     }
     private fun setAlarm(alarmset: setAlarmButton ) {

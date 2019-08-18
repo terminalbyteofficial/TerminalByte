@@ -22,11 +22,13 @@
 
 </androidx.appcompat.widget.Toolbar>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:id="@+id/welcome_home"
+
               android:text="Welcome Home"
+              android:id="@+id/welcome_tv"
               android:textColor="@color/Black"
               android:textSize="40sp"
-              android:layout_gravity="center" android:textStyle="bold|italic" tools:ignore="HardcodedText"/>
+              android:layout_gravity="center" android:textStyle="bold|italic" tools:ignore="HardcodedText"
+              android:autoText="false"/>
     <!--<include android:id="@+id/drawBar" layout="@layout/activity_navigation_drawer"/>-->
     <!--<include android:id="@+id/framL" layout="@layout/content_navigation_drawer"/>-->
 </LinearLayout>

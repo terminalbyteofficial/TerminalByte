@@ -8,8 +8,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.analytics.FirebaseAnalytics
-import kotlinx.android.synthetic.main.home_layout.*
-import kotlinx.android.synthetic.main.login_or_signup.*
 import java.io.File
 
 
@@ -40,8 +38,7 @@ class MainActivity : AppCompatActivity() {
             loginB?.setOnClickListener {
                 //if the Login button is clicked
                 //Intent of the login page
-                name = get_name.text.toString()
-                age = get_age.text.toString()
+
                 edt.putString("name",name)
                 edt.putString("age",age)
                 edt.apply()
@@ -50,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         else{
-            welcome_home.text=sPreference.getString("name"," ")//Check This...LOG THIS AND CHECK
 
             val int = Intent(this, NavigationDrawerActivity::class.java)
             startActivity(int)
